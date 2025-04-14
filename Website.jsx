@@ -44,11 +44,53 @@ export default function KirchbuehlWebsite() {
     }
   };
 
+  const products = [
+    {
+      name: "iPad 11″ Wi-Fi (A16)",
+      price: "ab 399,00 €",
+      delivery: "5–14 Werktage",
+      note: "Ideal für den Schulalltag mit starkem A16 Chip und großem Display – perfekt für Lern-Apps und Videokonferenzen."
+    },
+    {
+      name: "iPad 11″ Wi-Fi + Cellular (A16)",
+      price: "ab 559,00 €",
+      delivery: "5–14 Werktage",
+      note: "Alle Vorteile des normalen iPads – plus mobiles Internet unterwegs. Optimal für flexibles Arbeiten und Reisen."
+    },
+    {
+      name: "iPad Pro 11″ M2 Wi-Fi",
+      price: "ab 749,00 €",
+      delivery: "5–14 Werktage",
+      note: "Pro-Level Performance mit M2 Chip – ideal für Design, Multitasking und anspruchsvolle Bildungs-Apps."
+    },
+    {
+      name: "iPad 10,2″ Wi-Fi (9. Gen)",
+      price: "ab 419,00 €",
+      delivery: "5–14 Werktage",
+      note: "Kompakter Klassiker – idealer Einstieg für Schüler*innen mit solidem Funktionsumfang."
+    },
+    {
+      name: "iPad Air 10,9″ (M1)",
+      price: "ab 619,00 €",
+      delivery: "5–14 Werktage",
+      note: "Leicht und leistungsstark mit M1 Chip – perfekt für kreative Projekte und flüssiges Arbeiten."
+    },
+    {
+      name: "iPad mini 8,3″ (6. Gen)",
+      price: "ab 579,00 €",
+      delivery: "5–14 Werktage",
+      note: "Ultrakompakt und mobil – für kleine Hände oder große Flexibilität unterwegs."
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white text-black font-sans">
       <header className="bg-white border-b border-black sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center"><img src="/logo.png" alt="Kirchbühl Logo" className="h-10 mr-3" /><span className="text-xl font-bold">Kirchbühl Group</span></div>
+          <div className="flex items-center">
+            <img src="/logo.png" alt="Kirchbühl Logo" className="h-10 mr-3" />
+            <span className="text-xl font-bold">Kirchbühl Group</span>
+          </div>
           <nav className="space-x-4 text-black text-sm font-medium">
             <a href="#kontakt" className="hover:underline">{text[lang].kontakt}</a>
             <a href="#impressum" className="hover:underline">{text[lang].impressum}</a>
@@ -60,7 +102,6 @@ export default function KirchbuehlWebsite() {
         </div>
       </header>
 
-      {/* Landing Page */}
       <section className="h-screen flex flex-col justify-center items-center text-center bg-white text-black px-4">
         <h1 className="text-5xl font-bold mb-6">{text[lang].title}</h1>
         <p className="text-xl mb-8 max-w-xl">{text[lang].intro}</p>
@@ -69,73 +110,22 @@ export default function KirchbuehlWebsite() {
         </a>
       </section>
 
-      {/* Angebote */}
-       id="angebote" className="py-16 px-6">
-  <div className="max-w-6xl mx-auto">
-    <h2 className="text-3xl font-bold text-center mb-8">{text[lang].angebot}</h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div className="border border-gray-300 rounded-lg p-5 bg-white shadow-sm">
-        <h3 className="text-xl font-semibold">iPad 11″ Wi-Fi (A16)</h3>
-        <p><strong>Preis:</strong> ab 379,00 €</p>
-        <p><strong>Lieferzeit:</strong> 5–14 Werktage</p>
-        <p className="mt-2 text-sm text-black">Ideal für den Schulalltag mit starkem A16 Chip und großem Display – perfekt für Lern-Apps und Videokonferenzen.</p>
-      </div>
-      <div className="border border-gray-300 rounded-lg p-5 bg-white shadow-sm">
-        <h3 className="text-xl font-semibold">iPad 11″ Wi-Fi + Cellular (A16)</h3>
-        <p><strong>Preis:</strong> ab 539,00 €</p>
-        <p><strong>Lieferzeit:</strong> 5–14 Werktage</p>
-        <p className="mt-2 text-sm text-black">Alle Vorteile des normalen iPads – plus mobiles Internet unterwegs. Optimal für flexibles Arbeiten und Reisen.</p>
-      </div>
-      <div className="border border-gray-300 rounded-lg p-5 bg-white shadow-sm">
-        <h3 className="text-xl font-semibold">iPad Pro 11″ M2 Wi-Fi</h3>
-        <p><strong>Preis:</strong> ab 729,00 €</p>
-        <p><strong>Lieferzeit:</strong> 5–14 Werktage</p>
-        <p className="mt-2 text-sm text-black">Pro-Level Performance mit M2 Chip – ideal für Design, Multitasking und anspruchsvolle Bildungs-Apps.</p>
-      </div>
-      <div className="border border-gray-300 rounded-lg p-5 bg-white shadow-sm">
-        <h3 className="text-xl font-semibold">iPad 10,2″ Wi-Fi (9. Gen)</h3>
-        <p><strong>Preis:</strong> ab 399,00 €</p>
-        <p><strong>Lieferzeit:</strong> 5–14 Werktage</p>
-        <p className="mt-2 text-sm text-black">Kompakter Klassiker – idealer Einstieg für Schüler*innen mit solidem Funktionsumfang.</p>
-      </div>
-      <div className="border border-gray-300 rounded-lg p-5 bg-white shadow-sm">
-        <h3 className="text-xl font-semibold">iPad Air 10,9″ (M1)</h3>
-        <p><strong>Preis:</strong> ab 599,00 €</p>
-        <p><strong>Lieferzeit:</strong> 5–14 Werktage</p>
-        <p className="mt-2 text-sm text-black">Leicht und leistungsstark mit M1 Chip – perfekt für kreative Projekte und flüssiges Arbeiten.</p>
-      </div>
-      <div className="border border-gray-300 rounded-lg p-5 bg-white shadow-sm">
-        <h3 className="text-xl font-semibold">iPad mini 8,3″ (6. Gen)</h3>
-        <p><strong>Preis:</strong> ab 559,00 €</p>
-        <p><strong>Lieferzeit:</strong> 5–14 Werktage</p>
-        <p className="mt-2 text-sm text-black">Ultrakompakt und mobil – für kleine Hände oder große Flexibilität unterwegs.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
+      <section id="angebote" className="py-16 px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">{text[lang].angebot}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { name: "iPad 11″ Wi-Fi (A16)", price: "ab 379,00 €", delivery: "5–14 Werktage" },
-              { name: "iPad 11″ Wi-Fi + Cellular (A16)", price: "ab 539,00 €", delivery: "5–14 Werktage" },
-              { name: "iPad Pro 11″ M2 Wi-Fi", price: "ab 729,00 €", delivery: "5–14 Werktage" },
-              { name: "iPad 10,2″ Wi-Fi (9. Gen)", price: "ab 399,00 €", delivery: "5–14 Werktage" },
-              { name: "iPad Air 10,9″ (M1)", price: "ab 599,00 €", delivery: "5–14 Werktage" },
-              { name: "iPad mini 8,3″ (6. Gen)", price: "ab 559,00 €", delivery: "5–14 Werktage" }
-            ].map((ipad, i) => (
+            {products.map((ipad, i) => (
               <div key={i} className="border border-gray-300 rounded-lg p-5 bg-white shadow-sm">
                 <h3 className="text-xl font-semibold">{ipad.name}</h3>
                 <p><strong>Preis:</strong> {ipad.price}</p>
                 <p><strong>Lieferzeit:</strong> {ipad.delivery}</p>
+                <p className="mt-2 text-sm text-black">{ipad.note}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Kontaktformular */}
       <section id="kontakt" className="py-16 px-6">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold mb-6 text-center">{text[lang].kontakt}</h2>
@@ -148,7 +138,6 @@ export default function KirchbuehlWebsite() {
         </div>
       </section>
 
-      {/* Impressum */}
       <section id="impressum" className="py-16 px-6">
         <div className="max-w-4xl mx-auto text-black">
           <h2 className="text-3xl font-bold mb-4">{text[lang].imprint}</h2>
@@ -159,7 +148,6 @@ export default function KirchbuehlWebsite() {
         </div>
       </section>
 
-      {/* Datenschutz */}
       <section id="datenschutz" className="py-16 px-6">
         <div className="max-w-4xl mx-auto text-black">
           <h2 className="text-3xl font-bold mb-4">{text[lang].privacy}</h2>
@@ -167,7 +155,6 @@ export default function KirchbuehlWebsite() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="text-center py-6 text-sm text-black">
         {text[lang].company}
       </footer>
