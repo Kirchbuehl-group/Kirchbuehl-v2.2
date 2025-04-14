@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Logo from "./logo.png";
 
 export default function KirchbuehlWebsite() {
   const [lang, setLang] = useState("de");
@@ -21,7 +22,7 @@ export default function KirchbuehlWebsite() {
       },
       imprint: "Impressum",
       privacy: "Datenschutzerklärung",
-      company: "Kirchbühl Group • Kirchbühlstr. 6, 79677 Schönau im Schwarzwald • kirchbuehlgroup@gmail.com"
+      company: "Kirchbühl Group • Kirchbühlstr. 6 79677 Schönau im Schwarzwald • kirchbuehlgroup@gmail.com"
     },
     en: {
       title: "Welcome to Kirchbühl Group",
@@ -40,7 +41,7 @@ export default function KirchbuehlWebsite() {
       },
       imprint: "Legal Notice",
       privacy: "Privacy Policy",
-      company: "Kirchbühl Group • Kirchbühlstr. 6, 79677 Schönau, Germany • kirchbuehlgroup@gmail.com"
+      company: "Kirchbühl Group • Kirchbühlstr. 6 79677 Schönau, Germany • kirchbuehlgroup@gmail.com"
     }
   };
 
@@ -88,7 +89,7 @@ export default function KirchbuehlWebsite() {
       <header className="bg-white border-b border-black sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center">
-            <img src="/logo.png" alt="Kirchbühl Logo" className="h-10 mr-3" />
+            <img src={Logo} alt="Kirchbühl Logo" className="h-10 mr-3" />
             <span className="text-xl font-bold">Kirchbühl Group</span>
           </div>
           <nav className="space-x-4 text-black text-sm font-medium">
@@ -110,7 +111,9 @@ export default function KirchbuehlWebsite() {
         </a>
       </section>
 
-      <section id="angebote" className="py-16 px-6">
+      
+<hr className="border-black my-8" />
+<section id="angebote" className="py-16 px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">{text[lang].angebot}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -126,7 +129,9 @@ export default function KirchbuehlWebsite() {
         </div>
       </section>
 
-      <section id="kontakt" className="py-16 px-6">
+      
+<hr className="border-black my-8" />
+<section id="kontakt" className="py-16 px-6">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold mb-6 text-center">{text[lang].kontakt}</h2>
           <form className="space-y-4" action="https://formspree.io/f/xzzewerd" method="POST">
@@ -138,7 +143,9 @@ export default function KirchbuehlWebsite() {
         </div>
       </section>
 
-      <section id="impressum" className="py-16 px-6">
+      
+<hr className="border-black my-8" />
+<section id="impressum" className="py-16 px-6">
         <div className="max-w-4xl mx-auto text-black">
           <h2 className="text-3xl font-bold mb-4">{text[lang].imprint}</h2>
           <p><strong>Kirchbühl Group</strong><br />
@@ -148,7 +155,9 @@ export default function KirchbuehlWebsite() {
         </div>
       </section>
 
-      <section id="datenschutz" className="py-16 px-6">
+      
+<hr className="border-black my-8" />
+<section id="datenschutz" className="py-16 px-6">
         <div className="max-w-4xl mx-auto text-black">
           <h2 className="text-3xl font-bold mb-4">{text[lang].privacy}</h2>
           <p>Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst und halten uns strikt an die Regeln der Datenschutzgesetze.</p>
